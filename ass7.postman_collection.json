@@ -1,0 +1,451 @@
+{
+  "info": {
+    "_postman_id": "430d0cb6-ebdc-4ec3-a46c-466115170588",
+    "name": "ass7",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "41941596"
+  },
+  "item": [
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "Signup",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"mohamed\",\n    \"email\":\"ahmed@gmaisls.com\",\n    \"password\":\"123456\",\n    \"phone\":\"01552489754\",\n    \"age\":26\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/users/signup",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\":\"ahmed@gmaisls.com\",\n    \"password\":\"123456  \"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateUser",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \n    \"email\":\"mohamed@gmail.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/users/6adcd3a457d1e7dd1700ca15",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "6adcd3a457d1e7dd1700ca15"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteUser",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/users?id=6adcd3bb2931096bb6b57093",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "6adcd3bb2931096bb6b57093"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findUser",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users?id=6adcd35cc67f20deaa3c4cb9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "6adcd35cc67f20deaa3c4cb9"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Note",
+      "item": [
+        {
+          "name": "addNote",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\":\"note 1\",\n    \"content\":\"sssss\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateNote",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\":\"note 1\",\n    \"content\":\"updates\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/6adcdf939894cf1d9ef3effb?userId=6adcd35cc67f20deaa3c4cb9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "6adcdf939894cf1d9ef3effb"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6adcd35cc67f20deaa3c4cb9"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "replaceNote",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"updated\",\n  \"content\": \"update content\",\n  \"userId\": \"6adcd35cc67f20deaa3c4cb9\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/replace/6adcdf939894cf1d9ef3effb?userId=6adcd35cc67f20deaa3c4cb7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "replace",
+                "6adcdf939894cf1d9ef3effb"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6adcd35cc67f20deaa3c4cb7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateAllNotes",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"updated\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/all?userId=6adcd35cc67f20deaa3c4cb7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "all"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6adcd35cc67f20deaa3c4cb7"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteNote",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/notes/6adcdf939894cf1d9ef3effb",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "6adcdf939894cf1d9ef3effb"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getNote",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/notes/6adceb1990b0ed4eb3db03eb?userId=6adcd35cc67f20deaa3c4cb9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "6adceb1990b0ed4eb3db03eb"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6adcd35cc67f20deaa3c4cb9"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getNoteByContent",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/notes/note-by-content?content=sssss&userId=6adcd35cc67f20deaa3c4cb9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "note-by-content"
+              ],
+              "query": [
+                {
+                  "key": "content",
+                  "value": "sssss"
+                },
+                {
+                  "key": "userId",
+                  "value": "6adcd35cc67f20deaa3c4cb9"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getNoteWithUser",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/notes/note-with-user",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "note-with-user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getNoteByTitle",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/notes/aggregate?title=note%201&userId=6adcd35cc67f20deaa3c4cb9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "aggregate"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "note%201"
+                },
+                {
+                  "key": "userId",
+                  "value": "6adcd35cc67f20deaa3c4cb9"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteAllNotes",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/notes?userId=6adcd35cc67f20deaa3c4cb9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "6adcd35cc67f20deaa3c4cb9"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
